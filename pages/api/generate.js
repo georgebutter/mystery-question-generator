@@ -29,7 +29,7 @@ export default async function (req, res) {
 }
 
 function generateTopic() {
-  return `Suggest a random single word topic`;
+  return `Suggest a random single word topic for an icebreaker question`;
 }
 
 function generatePrompt(input) {
