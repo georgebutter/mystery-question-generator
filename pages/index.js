@@ -16,8 +16,9 @@ export default function Home() {
       body: JSON.stringify({ input }),
     });
     const data = await response.json();
-    setResult(data.result.question);
-    setInput(data.result.topic);
+    console.log(data)
+    setResult(data.question);
+    setInput(data.topic);
   }
 
   return (
