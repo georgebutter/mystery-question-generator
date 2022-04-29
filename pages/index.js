@@ -16,8 +16,8 @@ export default function Home() {
       body: JSON.stringify({ input }),
     });
     const data = await response.json();
-    setResult(data.result);
-    setInput("");
+    setResult(data.result.question);
+    setInput(data.result.topic);
   }
 
   return (
@@ -31,6 +31,7 @@ export default function Home() {
           <label>
             Create a Mystery Question about:
           </label>
+          <small>Leave blank to generate a random topic</small>
           <input
             type="text"
             name="animal"
